@@ -64,3 +64,40 @@ The system is designed for **basic surveillance, intrusion monitoring, and autom
 * Mobile notification system
 * Multi-object tracking
 * Real-time dashboard for monitoring
+## Hardware Setup
+
+The system is implemented using a Raspberry Pi connected to a PIR motion sensor and a USB webcam.
+The Raspberry Pi runs a Python-based object detection program using OpenCV and the YOLOv3-Tiny model.
+
+When motion is detected:
+
+1. The camera captures frames.
+2. The YOLO model performs object detection.
+3. The detected object is recorded as a short video clip.
+4. The video is saved with a timestamp.
+5. An email alert with the recorded video is automatically sent.
+
+## Prototype Testing
+
+The prototype was tested in a laboratory environment. The Raspberry Pi monitored the camera feed in real-time and successfully detected objects when motion occurred near the sensor. When detection happened, the system recorded a short video clip and triggered the automated email notification system.
+
+## Demo Video
+
+Video demonstration of the working prototype:
+
+https://drive.google.com/file/d/1S0_XcWGQZi6bpK0Rvw0fFa68ugKX8MH3/view?usp=drivesdk
+
+## Output
+
+* Real-time object detection using YOLOv3-Tiny
+* Motion-triggered video recording
+* Email notification with attached video evidence
+* Timestamp-based storage of detection events
+
+## Applications
+
+* Smart surveillance systems
+* Intrusion detection
+* AI-based monitoring systems
+* Home and office security automation
+
